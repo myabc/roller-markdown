@@ -1,5 +1,5 @@
-Roller Markdown
-===============
+Roller Markdown Plugin
+======================
 
 To compile:
 

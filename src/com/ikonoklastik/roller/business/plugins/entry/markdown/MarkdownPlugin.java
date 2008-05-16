@@ -1,4 +1,4 @@
-package com.ikonoklastik.roller.plugins.weblogentry.markdown;
+package com.ikonoklastik.roller.business.plugins.entry.markdown;
 
 import com.petebevin.markdown.MarkdownProcessor;
 import org.apache.commons.lang.StringEscapeUtils;

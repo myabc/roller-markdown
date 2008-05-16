@@ -1,3 +1,4 @@
+.DS_Store
 build
 nbproject/build-impl.xml
 nbproject/genfiles.properties
