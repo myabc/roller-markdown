@@ -1,11 +1,11 @@
 <%-- This page is designed to be included in edit-weblog.jsp --%>
 <%@ include file="/WEB-INF/jsps/taglibs-struts2.jsp" %>
 
-<link rel="stylesheet" type="text/css" href="<s:url value="/roller-ui/authoring/editors/markitup/skins/markitup/style.css"/>" />
-<link rel="stylesheet" type="text/css" href="<s:url value="/roller-ui/authoring/editors/markitup/sets/markdown/style.css"/>" />
-<script type="text/javascript" src="<s:url value="/roller-ui/authoring/editors/jquery.pack.js"/>"></script>
-<script type="text/javascript" src="<s:url value="/roller-ui/authoring/editors/markitup/jquery.markitup.pack.js"/>"></script>
-<script type="text/javascript" src="<s:url value="/roller-ui/authoring/editors/markitup/sets/markdown/set.js"/>"></script>
+<link rel="stylesheet" type="text/css" href="<s:url value="/plugins-ui/authoring/editors/markitup/skins/markitup/style.css"/>" />
+<link rel="stylesheet" type="text/css" href="<s:url value="/plugins-ui/authoring/editors/markitup/sets/markdown/style.css"/>" />
+<script type="text/javascript" src="<s:url value="/plugins-ui/authoring/editors/jquery.pack.js"/>"></script>
+<script type="text/javascript" src="<s:url value="/plugins-ui/authoring/editors/markitup/jquery.markitup.pack.js"/>"></script>
+<script type="text/javascript" src="<s:url value="/plugins-ui/authoring/editors/markitup/sets/markdown/set.js"/>"></script>
 
 <%-- ===================================================================== --%>
 <p class="toplabel"><s:text name="weblogEdit.content" /></p>

@@ -20,7 +20,7 @@ public class MarkdownEditor implements WeblogEntryEditor {
     }
     
     public String getJspPage() {
-        return "/roller-ui/authoring/editors/editor-markdown.jsp";
+        return "/plugins-ui/authoring/editors/editor-markdown.jsp";
     }
     
 }
