@@ -35,12 +35,12 @@ Installation
     *  `markdownj-1.0.2b4-0.3.0.jar`: _the MarkdownJ library_
     *  `roller-markdown.jar`: _this plugin_
     
-2.  Create a new directory for editor plugins in your `ROLLER_INSTALL_DIR/web`:  
+2.  Create a new directory for editor plugins in your `ROLLER_INSTALL_DIR`:  
     `mkdir -p plugins-ui/authoring/editors`
     
 3.  Copy the contents of this plugin web/editors directory to your newly created
     directory for editor plugins:  
-    `cp -R web/editors $ROLLER_INSTALL_DIR/web/plugins-ui/authoring/editors`
+    `cp -R web/editors $ROLLER_INSTALL_DIR/plugins-ui/authoring/`
     
 4.  Edit your `roller-custom.properties` with your favourite editor. If you
     installed Roller to Tomcat for example, your Roller configuration will
@@ -78,6 +78,9 @@ Installation
 
     *If you wish to make the Markdown editor your default*:
     `plugins.defaultEditor=editor-markdown.jsp`
+
+6.  Restart your Roller installation (the web application, rather than the
+    server) to begin using the plugin.
 
 ### Building the Source
 

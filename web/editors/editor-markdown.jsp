@@ -16,10 +16,12 @@
 <s:textarea name="bean.summary" cols="75" rows="5" cssStyle="width: 100%" tabindex="6"/>
 
 <script language="javascript" type="text/javascript">
+// customSettings = { ... }
+
 // avoid conflicts with Prototype Library, used globally by Roller
 jQuery.noConflict();
 // apply MarkItUp!
 jQuery(document).ready(function()	{
-    jQuery('#entry_bean_text').markItUp(myMarkdownSettings);
+    jQuery('#entry_bean_text').markItUp(mySettings);
 });
 </script>
