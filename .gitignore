@@ -1,5 +1,7 @@
 .DS_Store
+*.log
 build
+dist/javadoc
 nbproject/build-impl.xml
 nbproject/genfiles.properties
 nbproject/platform.properties
