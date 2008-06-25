@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------------
 // markItUp! Universal MarkUp Engine, JQuery plugin
-// v 1.1.0 beta
+// v 1.1.1 beta
 // Dual licensed under the MIT and GPL licenses.
 // ----------------------------------------------------------------------------
 // Copyright (C) 2007-2008 Jay Salvat
@@ -32,7 +32,7 @@
 		options = {	id:						'',
 					nameSpace:				'',
 					root:					'',
-					previewInWindow:		'', //"width=800, height=600, resizable=yes, scrollbars=yes",
+					previewInWindow:		'', // 'width=800, height=600, resizable=yes, scrollbars=yes'
 					previewAutoRefresh:		true,
 					previewPosition:		'after',
 					previewTemplatePath:	'~/templates/preview.html',
@@ -257,8 +257,16 @@
 				hash = clicked = button;
 				get();
 
-				$.extend(hash, { line:"", root:options.root, textarea:textarea, selection:(selection||''), caretPosition:caretPosition });
-
+				$.extend(hash, {	line:"", 
+						 			root:options.root,
+									textarea:textarea, 
+									selection:(selection||''), 
+									caretPosition:caretPosition,
+									ctrlKey:ctrlKey, 
+									shiftKey:shiftKey, 
+									altKey:altKey
+								}
+							);
 				// callbacks before insertion
 				prepare(options.beforeInsert);
 				prepare(clicked.beforeInsert);
@@ -423,21 +431,27 @@
 				if (!options.previewAutoRefresh) {
 					refreshPreview(); 
 				}
+			}
+
+			// refresh Preview window
+			function refreshPreview() {
+				if (previewWindow.document) {			
+					try {
+						sp = previewWindow.document.documentElement.scrollTop
+					} catch(e) {
+						sp = 0;
+					}					
+					previewWindow.document.open();
+					previewWindow.document.write(renderPreview());
+					previewWindow.document.close();
+					previewWindow.document.documentElement.scrollTop = sp;
+				}
 				if (options.previewInWindow) {
 					previewWindow.focus();
 				}
 			}
 
-			// refresh Preview window
-			function refreshPreview() {
-				if (previewWindow) {
-					previewWindow.document.open();
-					previewWindow.document.write(renderPreview());
-					previewWindow.document.close();
-				}
-			}
-
-			function renderPreview() {
+			function renderPreview() {				
 				if (options.previewParserPath !== '') {
 					$.ajax( {
 						type: 'POST',
@@ -468,8 +482,6 @@
 				shiftKey = e.shiftKey;
 				altKey = e.altKey;
 				ctrlKey = (!(e.altKey && e.ctrlKey)) ? e.ctrlKey : false;
-
-				$.extend(hash, { ctrlKey:ctrlKey, shiftKey:shiftKey, altKey:altKey  });
 
 				if (e.type === 'keydown') {
 					if (ctrlKey === true) {

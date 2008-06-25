@@ -1,7 +1,11 @@
-markItUp! 1.1.0
+markItUp! 1.1.1
 
 CHANGE LOG
-markItUp! 1.1.0 2008-05-07
+markItUp! 1.1.1 2008-06-02
+- Fixed: Key events status are passed to callbacks properly
+- Improved: ScrollPosition is kept in the preview when its refreshed
+
+markItUp! 1.1.0 2008-05-04
 - Modified: Textarea's id is no more moved to the main container
 - Modified: NameSpace Span become a Div to remain strict
 - Added: Relative path to the script is computed
