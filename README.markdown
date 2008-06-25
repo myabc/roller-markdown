@@ -56,7 +56,7 @@ You can use the installer script provided to perform steps 1-3 for you:
     listed in these instructions.  
     Change the properties as listed below:
     
-    **Default:**  
+    **Change from the defaults:**  
     `plugins.page=\
     org.apache.roller.weblogger.business.plugins.entry.ConvertLineBreaksPlugin \
     ,org.apache.roller.weblogger.business.plugins.entry.TopicTagPlugin \
@@ -69,7 +69,7 @@ You can use the installer script provided to perform steps 1-3 for you:
     
     `plugins.defaultEditor=editor-text.jsp`
 
-    **Customized:**  
+    **to:**  
     `plugins.page=\
     com.ikonoklastik.roller.business.plugins.entry.markdown.MarkdownPlugin \
     ,org.apache.roller.weblogger.business.plugins.entry.ConvertLineBreaksPlugin \
@@ -84,7 +84,23 @@ You can use the installer script provided to perform steps 1-3 for you:
     *If you wish to make the Markdown editor your default*:
     `plugins.defaultEditor=editor-markdown.jsp`
 
-6.  Restart your Roller installation (the web application, rather than the
+8.  If you wish to allow Markdown formatting in your comment system, then make
+    the following additional changes: 
+
+    **Change from (the defaults):**
+    `comment.formatter.classnames=\ 
+    org.apache.roller.weblogger.business.plugins.comment.AutoformatPlugin,\ 
+    org.apache.roller.weblogger.business.plugins.comment.LinkMarkupPlugin,\ 
+    org.apache.roller.weblogger.business.plugins.comment.HTMLSubsetPlugin`
+    
+    **to:**
+    `comment.formatter.classnames=\ 
+    com.ikonoklastik.roller.business.plugins.entry.markdown.MarkdownCommentPlugin,\
+    org.apache.roller.weblogger.business.plugins.comment.AutoformatPlugin,\ 
+    org.apache.roller.weblogger.business.plugins.comment.LinkMarkupPlugin,\ 
+    org.apache.roller.weblogger.business.plugins.comment.HTMLSubsetPlugin`
+
+7.  Restart your Roller installation (the web application, rather than the
     server) to begin using the plugin.
 
 ### Building the Source
