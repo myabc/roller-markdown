@@ -1,4 +1,5 @@
 TODO
 ====
 
-  * Check license for MarkItUp!
+  * Fix issue with various different character encodings.
+  * Add support for pure JS Markdown parser.
