@@ -18,7 +18,7 @@ The plugin source code is released under an **MIT License**.
 
 > Copyright 2008 Alex Coles.
 
-A copy of the License may be found in the LICENSE file.
+A copy of the License may be found in the MIT-LICENSE file.
 
 Additionally, this plugin bundles the following software:
 
