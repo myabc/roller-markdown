@@ -29,7 +29,10 @@ Additionally, this plugin bundles the following software:
 Installation
 ------------
 
-### Installation
+### Install files
+
+You can use the installer script provided to perform steps 1-3 for you:
+    `ROLLER_INSTALL_DIR=/usr/local/tomcat/webapps/roller ./install.sh`
 
 1.  Copy the following libraries to your `ROLLER_INSTALL_DIR/WEB-INF/lib`:
     *  `markdownj-1.0.2b4-0.3.0.jar`: _the MarkdownJ library_
@@ -41,7 +44,9 @@ Installation
 3.  Copy the contents of this plugin web/editors directory to your newly created
     directory for editor plugins:  
     `cp -R web/editors $ROLLER_INSTALL_DIR/plugins-ui/authoring/`
-    
+
+### Configuration
+
 4.  Edit your `roller-custom.properties` with your favourite editor. If you
     installed Roller to Tomcat for example, your Roller configuration will
     most likely be found in `$CATALINA_HOME/common/classes/roller-custom.properties`.
